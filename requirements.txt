@@ -1,0 +1,4 @@
+Flask
+Flask-APScheduler==1.12.4
+elasticsearch==7.17.1
+requests
