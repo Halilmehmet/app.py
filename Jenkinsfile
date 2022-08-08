@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                bat ("docker-compose build " )
+                bat (" " )
                 
                 }
             }
         stage('UP') { 
             steps { 
-              bat ("docker-compose up  -t ${env.BUILD_ID} .")
+              bat ("docker-compose up  -t ${env.BUILD_ID} ")
                
                 }
             }
