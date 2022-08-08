@@ -9,7 +9,7 @@ pipeline {
                 '''
                 }
             }
-        }
+        
         stage('up'){
             steps {
                 sh '''
