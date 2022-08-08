@@ -11,5 +11,3 @@ services:
 volumes:
   elastic_data: {}
 
-networks:
-  elk:
