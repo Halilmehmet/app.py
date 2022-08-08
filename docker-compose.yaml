@@ -1,7 +1,7 @@
 version: '3.6'
 services:
   python:
-    container_name: python
+    container_name: gitpy
     build:
       context: ./
     ports:
