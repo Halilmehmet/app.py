@@ -5,7 +5,7 @@ pipeline {
         stage('Build') { 
             steps { 
                 sh '''
-                  docker-compose build
+                 
                 '''
                 }
             }
@@ -13,7 +13,7 @@ pipeline {
         stage('up'){
             steps {
                 sh '''
-                  docker-compose up -t $(env.BUILD_ID)
+                  docker compose version
                 '''
                 }
         }
