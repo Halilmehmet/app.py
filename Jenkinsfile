@@ -9,7 +9,7 @@ pipeline {
             }
         stage('UP') { 
             steps { 
-                bat ("docker run ${env.BUILD_ID} -p 8000:8000 -v ./app:/app")
+                bat ("docker run ${env.BUILD_ID} --expose 8000 -v ./app:/app")
                 
                 }
             }
