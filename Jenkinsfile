@@ -5,7 +5,14 @@ pipeline {
         stage('Build') { 
             steps { 
                 bat '''
-                 docker compose version
+                 docker-compose build -t ${env.BUILD_ID}
+                '''
+                }
+            }
+        stage('UP') { 
+            steps { 
+                bat '''
+                 docker-compose up -d  -t ${env.BUILD_ID}
                 '''
                 }
             }
