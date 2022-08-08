@@ -5,14 +5,14 @@ pipeline {
         stage('Build') { 
             steps { 
                 bat '''
-                 docker-compose build -t ${env.BUILD_ID}
+                 docker-compose build 
                 '''
                 }
             }
         stage('UP') { 
             steps { 
                 bat '''
-                 docker-compose up -d  -t ${env.BUILD_ID}
+                 docker-compose up -d  -t ${'''env.BUILD_ID'''}
                 '''
                 }
             }
