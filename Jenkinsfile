@@ -8,7 +8,12 @@ pipeline {
                 bat ("docker-compose up  ${env.BUILD_ID}")
                 }
             }
-        
+        stage('UP') { 
+            steps { 
+              bat ("docker-compose up  ${env.BUILD_ID}")
+               
+                }
+            }
         
    
     }
