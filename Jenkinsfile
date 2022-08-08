@@ -5,7 +5,7 @@ pipeline {
         stage('Build') { 
             steps { 
                 bat '''
-                 docker-compose build -t ${env.BUILD_ID}
+                 docker-compose build 
                 '''
                 }
             }
