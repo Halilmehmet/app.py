@@ -5,18 +5,11 @@ pipeline {
         stage('Build') { 
             steps { 
                 sh '''
-                 
+                 docker compose version
                 '''
                 }
             }
         
-        stage('up'){
-            steps {
-                sh '''
-                  docker compose version
-                '''
-                }
-        }
-        
+   
     }
 }
