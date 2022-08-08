@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                bat ("docker-compose build -d  -t ${env.BUILD_ID}")
+                bat ("docker build -d  -t ${env.BUILD_ID} -p 8000:8000 -v ./app:/app  ." )
                 }
             }
         stage('UP') { 
             steps { 
-                bat ("docker-compose up -d")
+                bat ("docker run ${env.BUILD_ID}")
                 
                 }
             }
