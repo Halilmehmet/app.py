@@ -10,16 +10,11 @@ pipeline {
             }
         stage('UP') { 
             steps { 
-              bat ("docker-compose up   ")
+              bat ("docker-compose up  -t ${env.BUILD_ID} ")
                
                 }
             }
-        stage('Down') { 
-            steps { 
-              bat ("docker-compose down ${env.BUILD_ID} ")
-               
-                }
-            }
+        
         
    
     }
