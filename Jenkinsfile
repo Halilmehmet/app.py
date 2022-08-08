@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                bat ("docker build -d  -t ${env.BUILD_ID} -p 8000:8000 -v ./app:/app  ." )
+                bat ("docker build  -t ${env.BUILD_ID} -p 8000:8000 -v ./app:/app  ." )
                 }
             }
         stage('UP') { 
